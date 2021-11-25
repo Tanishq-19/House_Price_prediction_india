@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>🏡 Indian House Price Prediction</title>
+  <link rel="stylesheet" href="{{ url_for('static',filename='styles/style.css') }}">
+
+</head>
+
+<body>
+  <div style="position: relative; width: 100%;">
+    <div style="position: absolute; top: 0; right: 0; width: 100px; text-align:right;">
+      <a href="https://github.com/Tanishq-19" style="color: black;"><p style="padding: 30px; color: white; font-weight: bold;">🐱GitHub</p></a>
+      
+    </div>
+  </div>
+  <div class="bg"></div>
+  <div class="bg bg2"></div>
+  <div class="bg bg3"></div>
+  <div class="content">
+    
+    
+    <br>
+    <br>
+    <h1 style="margin: 0 auto; width:500px; color: black; font-size: 200%;">🏡 Indian House Price Prediction</h1>
+    <br>
+    <br>		
+        <form class="form" style="color: black; font-weight: bold;" method="POST" action="{{url_for('predict')}}">
+         
+          Posted By: <select name="PB" required>
+            <option value=2>Owner</option>
+            <option value=1>Dealer</option>
+            <option value=0>Builder</option>
+          </select>
+          <br>
+          <br>
+          <!-- <h4 style="color: white; margin-bottom: 0;">Chest Pain Type</h6> -->
+          Under Construction: <select name="UC" required>
+            <option value=1>Yes</option>
+            <option value=0>No</option>
+          </select>
+          <br>
+          <br>
+          <!-- <h4 style="color: white; margin-bottom: 0;">Resting blood pressure (in mm Hg on admission to the hospital)</h6> -->
+          Resting blood pressure (in mm Hg on admission to the hospital): <input type="number" placeholder="Type here" name="RBP" required>
+          <br>
+          <br>
+          <!-- <h4 style="color: white; margin-bottom: 0;">Serum cholestoral in mg/dl</h6> -->
+          Serum cholestoral in mg/dl: <input type="number" placeholder="Type here" name="SC" required>
+          
+          <br>
+          <br>
+          <!-- <h4 style="color: white; margin-bottom: 0;">Fasting blood sugar > 120 mg/dl</h6> -->
+          Fasting blood sugar > 120 mg/dl: <select name="FBS" required>
+            <option value=1>True</option>
+            <option value=0>False</option>
+          </select>
+          
+          <h4 style="color: black; margin-bottom: 0;">Resting electrocardiographic results</h6>
+          <select name="RER" required>
+            <option value=0>Nothing to note</option>
+            <option value=1>ST-T Wave abnormality can range from mild symptoms to severe problems signals non-normal heart beat</option>
+            <option value=2>Possible or definite left ventricular hypertrophy Enlarged heart's main pumping chamber</option>
+          </select>
+          <br>
+          <br>
+          <!-- <h4 style="color: white; margin-bottom: 0;">Maximum heart rate achieved</h6> -->
+          Maximum heart rate achieved: <input type="number" placeholder="Type here" name="MHR" required>
+    
+          <br>
+          <br>
+          <!-- <h4 style="color: white; margin-bottom: 0;">Exercise induced angina</h6> -->
+          Exercise induced angina: <select name="EIA" required>
+            <option value=1>Yes</option>
+            <option value=0>No</option>
+          </select>
+    
+          <br>
+          <button type="submit" style="margin-left: 80px; margin-top: 30px; margin-bottom: 20px; padding: 10px;">📈Predict</button>
+        
+          
+    
+        </form>
+    
+        <p style="color: black; margin: 0 auto; width:500px; padding-bottom: 10px;">Developed with love ❤ by <a href="https://tanishq-19.github.io/portfolio/" style="color: black; font-weight: bold;">Tanishq</a></p>
+    
+        <br>
+        <br>
+  </div>
+  
+  
+</body>
+</html>
